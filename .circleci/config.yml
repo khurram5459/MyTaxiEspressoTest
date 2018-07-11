@@ -44,3 +44,8 @@ jobs:
           destination: reports
       - store_test_results:
           path: app/build/test-results
+
+      -test:
+          override:
+            - export TERM="dumb"; if [ -e ./gradlew ]; then ./gradlew test;else gradle test;fi
+            - cp -r app/build/test-results/* $CIRCLE_TEST_REPORTS
