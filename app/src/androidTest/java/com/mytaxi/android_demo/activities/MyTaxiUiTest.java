@@ -126,7 +126,7 @@ public class MyTaxiUiTest {
                         isDisplayed()));
         appCompatButton.perform(click());
 
-        Thread.sleep(10000);
+        Thread.sleep(6000);
 
         ViewInteraction appCompatAutoCompleteTextView = onView(
                 allOf(withId(R.id.textSearch),
